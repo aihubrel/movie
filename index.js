@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import "./style.css";
+
 const checkStatus = (response) => {
   if (response.ok) {
     // .ok returns true if response status is 200-299
@@ -19,15 +23,13 @@ const Movie = (props) => {
 
   return (
     <div className="row movies">
-      <div className="col-12 col-md-3">
-      <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
-          <h4 class="title">{Title}</h4>
-        </a>
+      <div className="col-12 col-md-3 movies">
         <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
-          <img src={Poster} className="img-fluid" />
-        </a>
-      </div>
-      <div className="col-12 col-md-3">
+            <h4 class="title">{Title}</h4>
+          </a>
+          <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
+            <img src={Poster} className="img-fluid" />
+          </a>
           <p class="typeNyear">{Type} | {Year}</p>
       </div>
     </div>
