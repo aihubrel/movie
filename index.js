@@ -1,7 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import "./style.css";
-
 const checkStatus = (response) => {
   if (response.ok) {
     // .ok returns true if response status is 200-299
