@@ -1,5 +1,3 @@
-
-
 const checkStatus = (response) => {
   if (response.ok) {
     // .ok returns true if response status is 200-299
@@ -21,15 +19,15 @@ const Movie = (props) => {
 
   return (
     <div className="row movies">
-      <div className="col-12 col-md-3 mb-3">
+      <div className="col-3 col-md-3">
+        <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
+          <h4 class="title">{Title}</h4>
+        </a>
         <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
           <img src={Poster} className="img-fluid" />
         </a>
       </div>
-      <div className="col-12 col-md-3 mb-3 ">
-        <a href={`https://www.imdb.com/title/${imdbID}/`} target="_blank">
-          <h4 class="title">{Title}</h4>
-        </a>
+      <div className="col-3 col-md-3">
           <p class="typeNyear">{Type} | {Year}</p>
       </div>
     </div>
@@ -85,7 +83,7 @@ class MovieFinder extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-3">
             <h1>Look for the movies</h1>
             <form onSubmit={this.handleSubmit} className="form-inline my-4">
               <input
