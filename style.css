@@ -15,7 +15,7 @@ h1{
 }
 
 img {
-  width: 150px !important;
+  width: 350px !important;
 }
 
 a:link, a:visited{
@@ -28,4 +28,6 @@ a:hover{
 
 .movies {
   border-bottom: 0.5px gray solid;
+  text-align: center;
+  margin: auto;
 }
